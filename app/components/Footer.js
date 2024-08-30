@@ -8,9 +8,10 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 {/* Sección de Menú */}
                 <div className="flex flex-col md:flex-row items-center justify-between mb-8">
-                    <div className="mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold mb-4">Enlaces Rápidos</h2>
-                        <ul className="space-y-2">
+                    {/* Enlaces Rápidos */}
+                    <div className="mb-6 md:mb-0 w-full md:w-1/3">
+                        <h2 className="text-2xl font-bold mb-4 text-center md:text-left">Enlaces Rápidos</h2>
+                        <ul className="space-y-2 text-center md:text-left">
                             {navigationLinks.map(({ href, label }) => (
                                 <li key={href}>
                                     <Link href={href} className="hover:text-gray-400 transition-colors">
@@ -22,13 +23,13 @@ export default function Footer() {
                     </div>
 
                     {/* Información de Contacto */}
-                    <div className="text-center md:text-left mb-6 md:mb-0">
+                    <div className="w-full md:w-1/3 text-center mb-6 md:mb-0">
                         <h2 className="text-2xl font-bold mb-4">Contacto</h2>
                         <p className="text-lg mb-4">Belgrano 457, Escobar, Buenos Aires, Argentina</p>
                         <p className="text-lg mb-4">
                             Email: <a href="mailto:info@tuempresa.com" className="hover:text-gray-400 transition-colors">info@tuempresa.com</a>
                         </p>
-                        <div className="flex justify-center md:justify-start space-x-4">
+                        <div className="flex justify-center space-x-4">
                             {socialLinks.map(({ href, icon, label }) => (
                                 <a
                                     key={label}
